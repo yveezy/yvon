@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Projet Java - Resultat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Rapport de Projet <em>Java</em></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><strong>Introduction</strong></a></li>
+                <li><a href="page2.html"><strong>Analyse,Conception&Organisation</strong></a></li>
+                <li><a href="page4.html"><strong>Conclusion</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Mode CLI</h2>
+            <p>Pour utiliser notre application en mode terminal, nous avons créé la class Root.java</p>
+
+            <p>Elle interprète les commandes saisies par l'utilisateur pour déclencher des analyses et des corrections spécifiques sur les fichiers Python. 
+                Lorsqu’elle est appelée, cette classe prend en compte différentes options telles que -h pour afficher l’aide, -d pour analyser un répertoire, ou -f pour examiner un fichier spécifique. 
+                Elle propose aussi à l’utilisateur d’utiliser des options qui permet de vérifier et d’améliorer le fichier python.</p>
+
+            <p>Notre appli propose 5 manières d’utiliser les options :</p>
+
+            <p>--type pour vérifier la présence des annotations types.</p>
+            <p>--head pour vérifier la présence du shebang</p>
+            <p>--pydoc pour vérifier la présence des commentaires pydoc.</p>
+            <p>--sbutf8 pour ajouter le shebang.</p>
+            <p>--comment pour ajouter les commentaire pydoc.</p>
+
+            
+
+        </article>
+
+        <article>
+            <h2>Mode GUI</h2>
+            
+            <p>Le GUI offre une interface pour manipuler les fichiers Python. 
+                Il propose des boutons pour sélectionner des répertoires, lister les fichiers Python, analyser un fichier ou un répertoire, ajouter des éléments tels que les shebangs ou les commentaires, et générer des statistiques. 
+                Il présente une fenêtre avec des boutons d'action, un champ texte et une zone de résultat. 
+                Chaque bouton déclenche des actions distinctes : le bouton "Analyser Fichier" ouvre un explorateur pour choisir un fichier Python à analyser et affiche le résultat. "Ajouter Shebang" insère un shebang dans un fichier sélectionné. "Lister Fichiers Python" présente la liste des fichiers Python dans un répertoire choisi. "Ajouter Commentaire" vérifie l'existence de commentaires et les ajoute si nécessaire. "Générer Statistique" produit des statistiques pour le répertoire sélectionné. 
+                Ces actions, définies dans des classes internes, facilitent l'interaction avec les fichiers Python, offrant une expérience conviviale pour analyser, modifier et visualiser ces fichiers de manière interactive.</p>
+            
+            <details>
+                <summary>Cliquez ici</summary>
+                <figure>
+                    <figcaption>GUI</figcaption>
+                    <img src="gui.png"  alt="">
+                </figure>
+            </details>    
+        </article>
+    </main>
+
+    <footer>
+        <figure>
+            <img src="téléchargement.jpeg"  alt="">
+        
+        </figure>
+        <p>&copy; 2024 </p>
+        <p>&copy; Yvon Fwala </p>
+        <p>&copy; L2 Groupe D </p>
+        
+
+    </footer>
+</body>
+</html>

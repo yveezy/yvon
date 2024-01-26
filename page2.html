@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Projet Java - Analyse,Conception&Organisation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        
+        <h1>Rapport de Projet <em>Java</em></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><strong>Introduction</strong></a></li>
+                <li><a href="page3.html"><strong>Resultat</strong></a></li>
+                <li><a href="page4.html"><strong>Conclusion</strong></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <article>
+            <h2>2. Analyse des Besoins et Spécification</h2>
+            <h3>2.1 Objectifs & Besoins</h3>
+                <p>Voici les principaux objectifs et fonctionnalités de l'application Java proposée pour ce projet est de :</p>
+                <p>-Répertorier les fichiers Python dans un répertoire</p>
+                <p>-Détecter l'absence d'annotations de type dans les fonctions</p>
+                <p>-Identifier les fichiers en absence de shebang</p>
+                <p>-Reconnaître les fonctions sans commentaires appropriés "pydoc".</p>
+                <p>-Inclure des options pour ajouter automatiquement des commentaires et shebangs manquants.</p>
+                <p>-Générer des statistiques de qualité pour les fichiers Python.</p>
+
+            <h3>2.2 Spécification</h3>
+                <p>Pour réaliser les objectifs, notre application devra savoir dans un 1er temps :</p>
+                <p>-Lire des ficher python dans un répertoire et sous répertoire avec les classes java FileReader et BufferedReader.</p>
+                <p>-Analyser la qualité du code python pour vérifier si les annotation type, shebang et commentaire sont présents.</p>
+                <p>-Générer les statistiques pour confirmer les présences de shebang, pydoc et des annotation type.:</p>
+                <p>-Réécriture des fichiers python avec FileWriter et BufferedWriter pour écrire les donnee dans les fichiers.</p>
+                <p>-Utiliser java swing pour créer l’interface graphique et les classes nécessaire pour le mode console.</p>
+                <p>-Gérée toutes les exceptions courantes.</p>
+        </article>
+
+        <article>
+            <h2>3. Conception et Implémentation</h2>
+            <h3>3.1 Choix et Décisions</h3>
+            <p>Nous avons divisé le travail en 3 classes afin de repartir équitablement la charge de travail et mieux se repérer dans le projet. 
+                Nous avons donc fait une partie CLI, GUI et outil afin d’utiliser les outils directement dans le CLI et le GUI. 
+                La partie qui nous a pris le plus de temps était la création des outils, ce qui est le corps du projet et nous avons pris la décision de travailler ensemble sur cette grosse partie de code afin de par la suite séparer le travail entre le CLI et le GUI</p>
+
+            <h3>3.2 Fonctionnalités</h3>
+            <p>Les outils créés et utilisés sont nombreux, nous avons une classe un aide correction qui va gérer l’écriture dans les fichiers avec ajouterCommentaire() ou encore ajouterShebang() à l’aide de java.io et java.util.
+             La deuxième classe importante est la classe Vérificateur qui va gérer tout ce qui lis pour vérifier si les fichiers possèdent par exemple les 2 lignes de shebang ou encore si le typage est bel et bien présent. 
+             Ensuite nous avons une classe RechercheFichier qui va juste renvoyer le chemin d’un fichier grâce a son nom et une classe Statistique qui fait les statistiques des fichiers et dossier a l’aide du vérificateur. 
+             Et pour finir une classe Analyseur qui fait appel a toute les fonctions présentes en même temps. Exemple :</p>
+            
+            <details>
+                <summary>Cliquez ici</summary>
+                <figure>
+                    <figcaption>Public String AnalyseFichier</figcaption>
+                    <img src="ana.png"  alt="">
+                
+                </figure>
+            </details>
+        </article>
+
+        <article>
+            <h2>4. Organisation du travail</h2>
+            <h3>4.1 Répartition des tâches</h3>
+            <p>Pour le planning, nous avons créé un diagramme représentant les tâches à faire. Il n’a pas été suivi à la lettre mais nous avons quand même pu suivre l’organisation du travail et par rapport aux tâches demandées.</p>
+            <p>Voici un aperçu de notre répartition des tâches </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribution</th>
+                        <th>Les différentes tâches à faire</th>
+                        <th>Complétude (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">Création d’application</td>
+                        <td>Diagramme de Gantt</td>
+                        <td>Jawed</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Diagramme de Classe</td>
+                        <td>Jawed</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Diagramme de cas d’utilisation</td>
+                        <td>Yvon</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">Implémentation des Classes</td>
+                        <td>Recherche Fichier</td>
+                        <td>Yvon</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Aide Correction Fichier</td>
+                        <td>Jawed</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Analyseur</td>
+                        <td>Jawed Yvon</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Statistiques</td>
+                        <td>Jawed</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Vérificateur</td>
+                        <td>Jawed</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Interface Graphique (GUI)</td>
+                        <td>GUI</td>
+                        <td>Yvon</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Gestion des Exceptions</td>
+                        <td>Implémentation</td>
+                        <td>Jawed Yvon</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Tests</td>
+                        <td>Jawed Yvon</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Documentation</td>
+                        <td>Rédaction du rapport</td>
+                        <td>Jawed Yvon</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Création du mini-site</td>
+                        <td>Jawed Yvon</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </article>
+    </main>
+
+    <footer>
+        <figure>
+            <img src="téléchargement.jpeg"  alt="">
+        
+        </figure>
+        <p>&copy; 2024 </p>
+        <p>&copy; Yvon Fwala </p>
+        <p>&copy; L2 Groupe D </p>
+        
+
+    </footer>
+</body>
+</html>
